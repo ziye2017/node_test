@@ -79,3 +79,7 @@ git config color.ui true
 git config format.pretty oneline
 交互地添加文件至缓存区：
 git add -i
+
+
+-----------------------------------------------------------
+我是新加的内容
