@@ -1,4 +1,6 @@
+var UserData = require('./data/data.js');
 var express = require('express');
+
 var app = express();
 
 app.listen(3000);
@@ -51,6 +53,9 @@ app.get('/about', function(req, res, next){
 	
 });
 
+app.get('/render', function(req, res, next){
+	res.render('render', UserData.render_1);
+});
 
 app.use(function(req, res){
 	res.status(404);
