@@ -30,6 +30,15 @@ app.get('/headers', function(req, res){
 	{
 		s += name + ": " + req.headers[name] + '\n';
 	}
+	
+	// 下面的无用，可见 res.send 才带上返回的HTTP 头
+	s += "\n"
+
+	for (var m in res.headers)
+	{
+		s += m + ": " + res.headers[m] + '\n';
+	}
+
 	res.send(s);
 
 });
